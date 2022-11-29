@@ -1,6 +1,41 @@
 {% extends "accounts/main.html"%}
 
+
 {%block content%}
-<h1>Dashboard Page</h1>
+<h1>Your Order Information</h1>
+{% include "accounts/status.html"%}
+
+{% comment %} #Start of customer block {% endcomment %}
+<div class = "row">
+    <div class= "col-md-5">
+        <h4>Customers</h4>
+        <hr>
+        <div class= "card-body">
+            <a class= "create-customer" href= ""> Create a Customer</a>
+            <table class= "table">
+                <tr>
+                    <th></th>
+                    <th>Your Customers<th>
+                    <th>Your Orders<th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div> 
+
+<div class="row">
+<div class="col-md-7">
+    <h4>Orders</h4>
+    <hr>
+    <div class= "card-body">
+        <a class= "create-order" href=""> Create a Order</a>
+        <table class= "table">
+            <tr>
+                <th>Product Type</th>
+                <th>Date Purchased</th>
+                <th>Status Of Order</th>
+                <th>Update Order</th>
+                <th>Remove Order</th>
+            </tr>
 {% endblock %} 
 
