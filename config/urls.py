@@ -20,8 +20,12 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",views.home),
-    path("products/",views.products),
-    path("customers/",views.customers),
-    path("dashboard/",views.dashboard),
+    path("",views.home,name= "home"),
+    path("products/",views.products, name= "products"),
+    path("customers/",views.customers,name="customers"),
+    path("dashboard/",views.dashboard, name= "dashboard"),
+
+
+    #create order
+    path("create_order/", views.createOrder, name="create_order")
 ]
